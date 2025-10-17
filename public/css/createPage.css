@@ -1,0 +1,71 @@
+.createMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.createMain > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.createMain h1 {
+    padding-bottom: 1.5rem;
+}
+
+.createMain input {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #555;
+    width: 40vw;
+}
+
+.createMain label {
+    margin-bottom: 0.25rem;
+}
+
+.createMain textarea {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    border: 2px solid #555;
+    width: 40vw;
+    height: 8vw;
+}
+
+.createMain button {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border: 2px solid rgb(76, 76, 255);
+    color: rgb(76, 76, 255);
+    border-radius: 10px;
+    background-color: #fff;
+    letter-spacing: 0.5px;
+    transition: 0.2s all;
+    width: fit-content;
+}
+
+.createMain button:hover {
+    background-color: rgb(76, 76, 255);
+    color: white;
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-2 {
+    display: none;
+}
+
+.invalid-feedback {
+    display: none !important;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+    display: block !important;
+}

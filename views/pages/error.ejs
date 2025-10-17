@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Error <%= statusCode %></title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+
+        <div class="error-container">
+            <h1>Error</h1>
+            <h2>Status code : <p><%= statusCode %></p></h2>
+            <h2>Message : <p><%= message %></p></h2>
+            <button onclick="window.location.href='/home'">Home page</button>
+        </div>
+
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

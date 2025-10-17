@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Airbnb | Holiday rentals, cabins, beach houses & more</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/createPage.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <form action="/home/<%= data._id %>/edit?_method=PATCH" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="createMain">
+                <h1>Edit a listing</h1>
+
+                <div>
+                    <label for="title" class="form-label">Title</label>
+                    <input name="title" type="text" id="title" class="form-control" placeholder="Enter a catchy title" required value="<%= data.title %>">
+                    <div class="invalid-feedback">Please enter a title.</div>
+                </div>
+
+                <div>
+                    <label for="image" class="form-label">Image</label>
+                    <input name="image" type="file" id="image" class="form-control">
+                    <div class="invalid-feedback">Please choose a valid image.</div>
+                </div>
+
+                <div>
+                    <label for="type" class="form-label">Property Type</label>
+                    <input name="type" type="text" id="type" class="form-control" placeholder="Enter your property type" value="<%= data.type %>">
+                </div>
+
+                <div>
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" id="description" class="form-control" placeholder="Enter your property description"><%= data.description %></textarea>
+                </div>
+
+                <div>
+                    <label for="location" class="form-label">Location</label>
+                    <input name="location" id="location" type="text" class="form-control" placeholder="Enter your property location" required value="<%= data.location %>">
+                    <div class="invalid-feedback">Please enter a location.</div>
+                </div>
+        
+                <div>
+                    <label for="price" class="form-label">Price</label>
+                    <input name="price" type="number" id="price" class="form-control" placeholder="Enter your price" required value="<%= data.price %>">
+                    <div class="invalid-feedback">Please enter a valid price.</div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <%- include('../partials/footer.ejs') %>
+        <script src="/js/createform.js"></script>
+        <script src="/js/flashMessage.js"></script>
+    </body>
+</html>

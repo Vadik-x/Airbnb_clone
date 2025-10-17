@@ -1,0 +1,19 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createMain > h1 {
+    text-align: center;
+}
+
+.name-input {
+    display: flex;
+    flex-direction: row !important;
+    gap: 1rem;
+}
+
+.name-input input {
+    width: calc(20vw - 0.5rem) !important;
+}

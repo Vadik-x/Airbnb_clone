@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Airbnb | Holiday rentals, cabins, beach houses & more</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+
+        <div id="listings">
+
+            <% if(homeData.length != 0) {%>
+                <div class="sections">
+                    <h3>Popular homes <i class="ri-arrow-right-s-line"></i></h3>
+                    <div class="sections-homes">
+                        <% let limit1 = homeData.length >= 15 ? 15 : homeData.length;
+                            for (var i = 0; i < limit1; i++) { %>
+                            <div class="home" onclick="window.location.href='/home/<%= homeData[i]._id %>'">
+                                <img class="home-img" src="<%= homeData[i].image.url %>">
+                                <div class="home-content">
+                                    <p><%= homeData[i].title %></p>
+                                    <p>
+                                        <span>&#8377;<%= homeData[i].price.toLocaleString("en-IN") %> for 2 nights</span>
+                                        <span class="rating"><i class="ri-star-fill"></i><%= homeData[i].rating %></span>
+                                    </p>
+                                </div>
+                                <% if(homeData[i].guestFavorite) { %>
+                                    <div class="home-guest-fav"><p>Guest favourite</p></div>
+                                <% } %>
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+
+            <% if(homeData.length > 15) { %>
+                <div class="sections">
+                    <h3>Available next weekend <i class="ri-arrow-right-s-line"></i></h3>
+                    <div class="sections-homes">
+                        <%  let limit2 = homeData.length >= 30 ? 30 : homeData.length;
+                            for(var i=15; i<30; i++) { %>
+                            <div class="home" onclick="window.location.href='/home/<%= homeData[i]._id %>'">
+                                <img class="home-img" src="<%= homeData[i].image.url %>">
+                                <div class="home-content">
+                                    <p><%= homeData[i].title %></p>
+                                    <p>&#8377;<%= homeData[i].price.toLocaleString("en-IN") %> for 2 night<i class="ri-star-fill"></i><%= homeData[i].rating %></p>
+                                </div>
+                                <% if(homeData[i].guestFavorite) { %>
+                                    <div class="home-guest-fav"><p>Guest favourite</p></div>
+                                <% } %>
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+
+            <% if(homeData.length > 30) { %>
+                <div class="sections">
+                    <h3>Available next month <i class="ri-arrow-right-s-line"></i></h3>
+                    <div class="sections-homes">
+                        <% for(var i=30; i<homeData.length; i++) { %>
+                            <div class="home" onclick="window.location.href='/home/<%= homeData[i]._id %>'">
+                                <img class="home-img" src="<%= homeData[i].image.url %>">
+                                <div class="home-content">
+                                    <p><%= homeData[i].title %></p>
+                                    <p>&#8377;<%= homeData[i].price.toLocaleString("en-IN") %> for 2 night<i class="ri-star-fill"></i><%= homeData[i].rating %></p>
+                                </div>
+                                <% if(homeData[i].guestFavorite) { %>
+                                    <div class="home-guest-fav"><p>Guest favourite</p></div>
+                                <% } %>
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+
+        </div>
+        <%- include('../partials/footer') %>
+        <script src="/js/flashMessage.js"></script>
+    </body>
+</html>

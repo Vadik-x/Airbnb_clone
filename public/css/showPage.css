@@ -1,0 +1,410 @@
+p {
+  margin-bottom: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: airbnb, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #000;
+  margin: 0.5rem 0;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.85rem; }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: airbnb;
+}
+
+.show-main {
+    display: flex;
+}
+
+#listing {
+    width: 62%;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#listing > h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#listing > h2:nth-last-of-type(1) {
+    font-size: 1.35rem;
+}
+
+#listing > img {
+    width: 55vw;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.guestFav {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border: 0.5px solid #999;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.guestFav img {
+    height: 2.75rem;
+    width: 1.5rem;
+    object-fit: cover;
+}
+
+.guestFav img:nth-last-of-type(1) {
+    margin-right: 1.75rem;
+}
+
+.guestFav h5 {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.guestFav-text {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.guestFav-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 1.75rem;
+}
+
+.guestFav-rating p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+}
+
+.hosted-by {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hosted-by img {
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hosted-by-content h6 {
+    margin-bottom: 0 !important;
+    font-weight: 600;
+}
+
+.listing-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content-text {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.content-text img {
+    height: 1.85rem;
+    width: 1.85rem;
+    object-fit: cover;
+}
+
+.content-text i {
+    font-size: 1.85rem;
+}
+
+.content-text div p {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.content-text div h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem !important;
+}
+
+.listings-btns {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.listings-btns button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.listings-btns button:nth-of-type(1) {
+    border: 2px solid rgb(44, 118, 255);
+    background-color: #fff;
+    color: rgb(44, 118, 255);
+}
+
+.listings-btns button:nth-of-type(1):hover {
+    border: 2px solid rgb(44, 118, 255);
+    background-color: rgb(44, 118, 255);
+    color: #fff;
+}
+
+#form-delete-btn {
+    border: 2px solid rgb(238, 37, 37);
+    background-color: #fff;
+    color: rgb(238, 37, 37);
+}
+
+#form-delete-btn:hover {
+    border: 2px solid rgb(238, 37, 37);
+    background-color: rgb(238, 37, 37);
+    color: #fff;
+}
+
+.navbar-2{
+    display: none;
+}
+
+.listing-price {
+    width: 38%;
+    display: flex;
+}
+
+.listing-price {
+    position: sticky;
+    top: 11.7vw;
+    margin-bottom: 3.25vw;
+    height: fit-content;
+    width: 24vw;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.listing-price-part1 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 0.90rem;
+    box-shadow: 0.5px 0.5px 10px #b7b7b7;
+}
+
+.listing-price-part1 i {
+    color: rgb(159, 24, 69);
+    font-size: 1.25rem;
+}
+
+.listing-price-part2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    color: #555;
+    box-shadow: 0.5px 0.5px 10px #b7b7b7;
+    border-radius: 10px;
+}
+
+.listing-price-part2 div {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.listing-price-part2 div h2 {
+    color: #000;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.listing-price-part2 button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    background: linear-gradient(#E61E4E, #E51D54, #E51D56, #E41D5B, #E41C5D, #E01561, #DD0F63, #DA0965, #D70566);
+    cursor: not-allowed;
+}
+
+.listing-price-part2 p:nth-last-of-type(1) {
+    font-size: 0.85rem;
+    color: #000;
+    width: fit-content;
+    text-align: center;
+}
+
+.show-review {
+    padding: 0rem 3rem 1rem 3rem;
+}
+
+.create-review form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.create-review form div label {
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+}
+
+.create-review form button {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border: 2px solid rgb(76, 76, 255);
+    color: rgb(76, 76, 255);
+    border-radius: 10px;
+    background-color: #fff;
+    letter-spacing: 0.5px;
+    transition: 0.2s all;
+    width: fit-content;
+}
+
+.create-review form button:hover {
+    background-color: rgb(76, 76, 255);
+    color: white;
+}
+
+.review-box {
+    padding: 0.75rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+}
+
+.review-box > div {
+    position: relative;
+    width: 40%;
+    /* height: 8rem; */
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    gap: 0.75rem;
+    transition: all 0.2s;
+}
+
+.review-box > div:hover {
+    .review-del-btn {
+        opacity: 1;
+    }
+}
+
+.user-reviewed {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.user-reviewed p {
+    margin: 0;
+}
+
+.user-reviewed img {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-review {
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.review-del-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 10px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border: 2px solid red;
+    color: red;
+    background-color: white;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.review-del-btn:hover {
+    color: white;
+    background-color: red;
+}
+
+#show-map {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40vw;
+    width: 75vw;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+#show-map h3 {
+    padding-bottom: 0.5rem;
+}
+
+#show-map p {
+    padding-bottom: 1rem;
+}
+
+#map {
+    height: 80%;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.custom-marker-popup .maplibregl-popup-content {
+    background: #fff;
+    color: #1e1e1e;
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: opacity 0.2s ease;
+}
