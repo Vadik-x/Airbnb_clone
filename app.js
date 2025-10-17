@@ -41,13 +41,13 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-const store = {
-  mongoUrl: DB_URL,
-  crypto: {
-    secret: process.env.SECRET
-  },
-  touchAfter: 24 * 3600
-}
+const store = MongoStore.create({
+    mongoUrl: DB_URL,
+    crypto: {
+        secret: process.env.SECRET
+    },
+    touchAfter: 24 * 3600,
+});
 
 store.on("error", () => {
   console.log('Error in Mongo Session Store : ', err);
