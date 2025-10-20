@@ -3,7 +3,19 @@
         <div class="nav-left">
             <img onclick="window.location.href='/home'" src="/images/logoname.png" alt="logo">
         </div>
-        <div class="nav-center">
+
+
+        <!-- Media 850px -> Start -->
+         <div class="search-box m-hidden-850 m-hidden-600">
+            <div class="search-box-input-group">
+                <input id="search-box-input-1" type="text" placeholder="Search destination">
+            </div>
+            <i class="ri-search-line search-icon"></i>
+        </div>
+        <!-- Media 850px -> end -->
+
+
+        <div class="nav-center search-hidden">
             <div class="nav-center-option" onclick="window.location.href='/home'">
                 <img src="/images/home.png">
                 <p>Homes</p>
@@ -13,7 +25,7 @@
                 <p>Experiences</p>
             </div>
             <div class="nav-center-option">
-                <img src="/images/Services.png">
+                <img src="https://res.cloudinary.com/dypp4lo45/image/upload/v1760748429/services_erxka4.png">
                 <p>Services</p>
             </div>
         </div>
@@ -23,6 +35,10 @@
             <div class="dropdown-wrapper">
                 <i id="userDropdownbtn" class="ri-menu-fill" tabindex="0"></i>
                 <div class="userDropdown">
+                    <div>
+                        <p tabindex="0" onclick="window.location.href='/home/create'">Become a host</p>
+                    </div>
+                    <hr style="color: #f1f1f1;">
                     <% if(!currUser) { %>
                         <p tabindex="0" onclick="window.location.href='/login'">Login</p>
                         <p tabindex="0" onclick="window.location.href='/signup'">Signup</p>
@@ -35,7 +51,7 @@
         </div>
     </div>
     <div class="navbar-2">
-        <div class="search-box">
+        <div class="search-box search-hidden">
             <div class="search-box-input-group">
                 <input id="search-box-input-1" type="text" placeholder="Search destination">
             </div>
@@ -50,6 +66,28 @@
             </div>
             <i class="ri-search-line search-icon"></i>
         </div>
+
+
+        <!-- Media 850px -> Start -->
+        <div class="m-hidden-850 navbar-1">
+            <div class="nav-center">
+                <div class="nav-center-option" onclick="window.location.href='/home'">
+                    <img src="/images/home.png">
+                    <p>Homes</p>
+                </div>
+                <div class="nav-center-option">
+                    <img src="/images/experience.png">
+                    <p>Experiences</p>
+                </div>
+                <div class="nav-center-option">
+                    <img src="https://res.cloudinary.com/dypp4lo45/image/upload/v1760748429/services_erxka4.png">
+                    <p>Services</p>
+                </div>
+            </div>
+        </div>
+        <!-- Media 850px -> end -->
+
+
     </div>
 </div>
 

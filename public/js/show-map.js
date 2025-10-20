@@ -1,5 +1,6 @@
 const key = window.MAPTILER_KEY;
 const locationName = document.getElementById("data-location").textContent.trim();
+const mapContainer = document.getElementById("map");
 
 fetch(`https://api.maptiler.com/geocoding/${encodeURIComponent(locationName)}.json?key=${key}`)
   .then(res => res.json())
@@ -17,6 +18,12 @@ fetch(`https://api.maptiler.com/geocoding/${encodeURIComponent(locationName)}.js
       style: `https://api.maptiler.com/maps/streets-v4/style.json?key=${key}`,
       center: [lon, lat],
       zoom: 15,
+
+      scrollZoom: false,
+      dragPan: false,
+      dragRotate: false,
+      touchZoomRotate: false,
+      doubleClickZoom: false
     });
 
     map.addControl(new maplibregl.NavigationControl(), "top-right");
@@ -41,5 +48,22 @@ fetch(`https://api.maptiler.com/geocoding/${encodeURIComponent(locationName)}.js
     markerEl.addEventListener("mouseleave", () => {
       popup.remove();
     });
+
+    const activateMap = () => {
+      map.scrollZoom.enable();
+      map.dragPan.enable();
+      map.dragRotate.enable();
+      map.touchZoomRotate.enable();
+      map.doubleClickZoom.enable();
+
+      mapContainer.style.cursor = "grab";
+
+      const overlay = mapContainer.querySelector('.map-overlay');
+      if (overlay) overlay.remove();
+    };
+
+    mapContainer.addEventListener('click', activateMap, { once: true });
+    mapContainer.addEventListener('touchstart', activateMap, { once: true });
+
   })
   .catch(err => console.error("Geocoding error:", err));

@@ -75,9 +75,6 @@ export const listingEditDone = async (req, res) => {
     updatedData.image = { url, filename };
   }
 
-  console.log('after updating');
-  console.log(updatedData);
-
   await listing.findByIdAndUpdate(id, updatedData, { new: true });
   req.flash("edited", "edited listing successfully");
   res.redirect(`/home/${id}`);

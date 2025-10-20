@@ -69,3 +69,35 @@
 .was-validated .form-control:invalid ~ .invalid-feedback {
     display: block !important;
 }
+
+
+
+@media (max-width: 1400px) {
+    .createMain div input {
+        width: 60vw;
+    }
+    .createMain div textarea {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .createMain div input {
+        width: 70vw;
+    }
+    .createMain div textarea {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .createMain {
+        padding: 2rem 0;
+    }
+    .createMain div input {
+        width: 85vw;
+    }
+    .createMain div textarea {
+        width: 85vw;
+    }
+}
